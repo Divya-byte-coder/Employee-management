@@ -8,15 +8,11 @@ public class Employee {
     private String email;
 
     public Employee() {}
-
-    // For INSERT
     public Employee(String name, int age, String email) {
         this.name = name;
         this.age = age;
         this.email = email;
     }
-
-    // For UPDATE / FETCH
     public Employee(int id, String name, int age, String email) {
         this.id = id;
         this.name = name;

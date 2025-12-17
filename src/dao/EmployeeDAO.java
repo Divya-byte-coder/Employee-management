@@ -10,8 +10,6 @@ import model.Employee;
 import util.DBConnection;
 
 public class EmployeeDAO {
-
-    // INSERT
     public boolean insertEmployee(Employee emp) {
         String sql = "INSERT INTO employee(name, age, email) VALUES (?, ?, ?)";
 
@@ -29,8 +27,6 @@ public class EmployeeDAO {
             return false;
         }
     }
-
-    // UPDATE
     public boolean updateEmployee(Employee emp) {
         String sql = "UPDATE employee SET name=?, age=?, email=? WHERE id=?";
 
@@ -49,8 +45,6 @@ public class EmployeeDAO {
             return false;
         }
     }
-
-    // DELETE
     public boolean deleteEmployee(int id) {
         String sql = "DELETE FROM employee WHERE id=?";
 
@@ -65,8 +59,6 @@ public class EmployeeDAO {
             return false;
         }
     }
-
-    // GET ALL
     public List<Employee> getAllEmployees() {
         List<Employee> list = new ArrayList<>();
         String sql = "SELECT * FROM employee";

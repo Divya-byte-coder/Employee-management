@@ -9,7 +9,7 @@ public class MainApp {
 
     public static void main(String[] args) {
 
-        try (Scanner sc = new Scanner(System.in)) {  // Scanner auto-closed
+        try (Scanner sc = new Scanner(System.in)) {  
             EmployeeDAO dao = new EmployeeDAO();
             int choice = 0;
 
@@ -29,7 +29,7 @@ public class MainApp {
                 }
 
                 choice = sc.nextInt();
-                sc.nextLine(); // consume newline
+                sc.nextLine(); 
 
                 switch (choice) {
                     case 1 -> {
@@ -43,7 +43,7 @@ public class MainApp {
                             break;
                         }
                         int age = sc.nextInt();
-                        sc.nextLine(); // consume newline
+                        sc.nextLine(); 
 
                         System.out.print("Enter Email: ");
                         String email = sc.nextLine();
@@ -60,8 +60,7 @@ public class MainApp {
                             break;
                         }
                         int id = sc.nextInt();
-                        sc.nextLine(); // consume newline
-
+                        sc.nextLine();
                         System.out.print("Enter New Name: ");
                         String newName = sc.nextLine();
 
@@ -72,7 +71,7 @@ public class MainApp {
                             break;
                         }
                         int newAge = sc.nextInt();
-                        sc.nextLine(); // consume newline
+                        sc.nextLine(); 
 
                         System.out.print("Enter New Email: ");
                         String newEmail = sc.nextLine();
@@ -89,7 +88,7 @@ public class MainApp {
                             break;
                         }
                         int deleteId = sc.nextInt();
-                        sc.nextLine(); // consume newline
+                        sc.nextLine(); 
                         System.out.println(dao.deleteEmployee(deleteId) ? "Employee deleted successfully." : "Delete failed.");
                     }
 
